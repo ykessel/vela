@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Light theme — warm cream ────────────────────── */
+:root {
+  color-scheme: light;
+  --color-background: 237 235 228;   /* #edebe4  warm parchment */
+  --color-surface:    255 255 255;   /* #ffffff  white cards    */
+  --color-surface-2:  224 221 211;   /* #e0ddd3  warm gray      */
+  --color-border:     214 211 201;   /* subtle warm border      */
+  --color-text:       35 33 28;      /* #23211c  warm near-black */
+  --color-muted:      97 93 84;      /* #615d54  warm gray      */
+  --color-accent:     155 92 47;     /* oklch(0.6 0.11 42) terracota */
+  --color-accent-fg:  255 255 255;
+}
+
+/* ── Dark theme — warm dark oak ──────────────────── */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-background: 24 22 18;
+  --color-surface:    35 33 28;
+  --color-surface-2:  48 45 38;
+  --color-border:     64 61 52;
+  --color-text:       245 242 234;   /* warm white */
+  --color-muted:      158 153 140;
+  --color-accent:     210 148 90;    /* lighter terracota */
+  --color-accent-fg:  24 22 18;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+  font-family: var(--font-hanken), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgb(var(--color-accent) / 0.15);
+  color: rgb(var(--color-text));
+}
+
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgb(var(--color-border)); border-radius: 2px; }
