@@ -42,7 +42,7 @@ export default async function AdminProductsPage() {
                   <div className="flex items-center gap-3">
                     {p.images[0] && (
                       <div className="w-10 h-10 relative rounded-lg overflow-hidden shrink-0">
-                        <Image src={p.images[0]} alt={p.name} fill className="object-cover" />
+                        <Image src={p.images[0]} alt={p.name} fill sizes="40px" className="object-cover" />
                       </div>
                     )}
                     <div>

@@ -11,7 +11,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
       {/* Main image */}
       <div className="relative aspect-square rounded-2xl overflow-hidden bg-surface-2">
         {images[active] ? (
-          <Image src={images[active]} alt={name} fill className="object-cover" priority />
+          <Image src={images[active]} alt={name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" priority />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-6xl text-muted/20">📦</div>
         )}
@@ -27,7 +27,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
                 i === active ? 'border-text' : 'border-border hover:border-text/30'
               }`}
             >
-              <Image src={img} alt={`${name} ${i + 1}`} fill className="object-cover" />
+              <Image src={img} alt={`${name} ${i + 1}`} fill sizes="64px" className="object-cover" />
             </button>
           ))}
         </div>

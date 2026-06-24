@@ -85,6 +85,7 @@ export default async function HomePage() {
               src={HERO_IMAGE}
               alt="Vela — Spring Summer 2025 collection"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-top"
               priority
             />
@@ -142,6 +143,7 @@ export default async function HomePage() {
                         src={cat.image}
                         alt={cat.name}
                         fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (

@@ -50,7 +50,7 @@ export function CartSidebar() {
                   <div key={item.productId} className="flex gap-3">
                     {item.image && (
                       <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-surface-2">
-                        <Image src={item.image} alt={item.name} fill className="object-cover" />
+                        <Image src={item.image} alt={item.name} fill sizes="64px" className="object-cover" />
                       </div>
                     )}
                     <div className="flex-1 min-w-0">

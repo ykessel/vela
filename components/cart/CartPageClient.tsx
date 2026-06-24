@@ -32,7 +32,7 @@ export function CartPageClient() {
             <div key={item.productId} className="flex gap-4 p-4 bg-surface border border-border rounded-2xl">
               {item.image && (
                 <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-surface-2">
-                  <Image src={item.image} alt={item.name} fill className="object-cover" />
+                  <Image src={item.image} alt={item.name} fill sizes="80px" className="object-cover" />
                 </div>
               )}
               <div className="flex-1 min-w-0">
